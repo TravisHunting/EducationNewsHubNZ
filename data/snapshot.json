@@ -3,6 +3,634 @@
   "generatedAt": "2026-09-11T07:23:22.874Z",
   "sources": [
     {
+      "id": "ministry",
+      "checkedAt": "2026-09-11T07:19:15.342Z",
+      "status": "error",
+      "error": "No matching publication links found; publisher layout needs review",
+      "count": 0,
+      "added": 0,
+      "method": "HTML discovery · robots respected",
+      "records": []
+    },
+    {
+      "id": "ncea",
+      "checkedAt": "2026-09-11T07:22:25.378Z",
+      "status": "healthy",
+      "count": 10,
+      "added": 0,
+      "method": "HTML discovery · robots respected",
+      "records": [
+        {
+          "id": "fba9cdc81e04f36d185eacec",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/revised-achievement-standards-and-supporting-materials-assessment-2027",
+          "title": "Revised Achievement Standards and supporting materials for assessment in 2027",
+          "excerpt": "Available now for planning purposes.",
+          "publishedAt": "2026-09-11T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:16.501Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "52b195548623f8177fdce1f5",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/additional-senior-secondary-subjects-open-feedback",
+          "title": "Additional senior secondary subjects open for feedback",
+          "excerpt": "Check out the additional new senior secondary subjects and give us your feedback.",
+          "publishedAt": "2026-08-21T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:16.501Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "834db78441e92d0051f24e74",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/new-industry-led-subjects-announced-senior-secondary-students",
+          "title": "New industry-led subjects announced for senior secondary students",
+          "excerpt": "New industry-led subjects announced for senior secondary students.",
+          "publishedAt": "2026-08-06T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Policy change",
+          "discoveredAt": "2026-09-11T07:03:16.501Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "b387757c1ee63f34e659da98",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/third-group-senior-secondary-subjects-open-feedback",
+          "title": "Third group of senior secondary subjects open for feedback",
+          "excerpt": "Check out the third group of new senior secondary subjects and give us your feedback.",
+          "publishedAt": "2026-07-06T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:16.501Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "8dedfe300e4c9863cd18a587",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/second-group-senior-secondary-subjects-open-feedback",
+          "title": "Second group of senior secondary subjects open for feedback",
+          "excerpt": "Check out the second group of new senior secondary subjects and give us your feedback.",
+          "publishedAt": "2026-06-10T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:16.501Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "ec29d3c494b8807d75137271",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/further-details-new-senior-secondary-qualifications",
+          "title": "Further details of new senior secondary qualifications",
+          "excerpt": "Further details of new senior secondary qualifications",
+          "publishedAt": "2026-05-16T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:16.501Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "2e6e08d6d1241dcee7283877",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/taumata-matauranga-motu-ka-taea-ncea-now-available-nceaeducation",
+          "title": "TAUMATA MĀTAURANGA Ā-MOTU KA TAEA | NCEA – now available on NCEA.education",
+          "excerpt": "Level 2 and Level 3 assessment resources for Te Marautanga o Aotearoa can now be found on NCEA.education.",
+          "publishedAt": "2026-05-08T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:16.501Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "0d588070f9f3a6a8da308ba6",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/ncea-update-structure-new-qualification-system-agreed",
+          "title": "NCEA update: structure of new qualification system agreed",
+          "excerpt": "Information regarding an update to NCEA and structure of a new qualification system.",
+          "publishedAt": "2026-03-26T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Policy change",
+          "discoveredAt": "2026-09-11T07:03:16.501Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "8eeaee49bbbdfef21ecd4ffe",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/new-level-1-vocabulary-lists-vagahau-niue-spoken-texts",
+          "title": "New Level 1 Vocabulary Lists & Vagahau Niue Spoken Texts",
+          "excerpt": "Information regarding new vocabulary lists and spoken text resources for Learning Languages.",
+          "publishedAt": "2026-03-23T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:17.025Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "0a5e73a77fc044d212e127c6",
+          "sourceId": "ncea",
+          "url": "https://ncea.education.govt.nz/whats-new/reviewed-nzc-tmoa-achievement-standards-and-assessment-materials-published-2026",
+          "title": "Reviewed NZC & TMoA Achievement Standards and assessment materials published for 2026",
+          "excerpt": "On each subject page, use the Recent Changes button to see a summary of updates.",
+          "publishedAt": "2026-01-21T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:17.025Z",
+          "retrievedAt": "2026-09-11T07:22:25.378Z",
+          "method": "HTML index + publication metadata"
+        }
+      ]
+    },
+    {
+      "id": "counts",
+      "checkedAt": "2026-09-11T07:19:27.765Z",
+      "status": "blocked",
+      "error": "HTTP 403: publisher blocked automated access",
+      "count": 0,
+      "added": 0,
+      "method": "HTML discovery · robots respected",
+      "records": []
+    },
+    {
+      "id": "ero",
+      "checkedAt": "2026-09-11T07:19:27.861Z",
+      "status": "healthy",
+      "count": 5,
+      "added": 5,
+      "method": "HTML discovery · robots respected",
+      "records": [
+        {
+          "id": "f286b51a18d3b43ceb6f35cf",
+          "sourceId": "ero",
+          "url": "https://www.ero.govt.nz/about-us/news/ece-regulatory-changes-information-webinars",
+          "title": "ECE Regulatory Changes: Information Webinars | ERO",
+          "excerpt": "",
+          "publishedAt": "2026-09-02T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Funding & policy",
+            "Early learning"
+          ],
+          "signal": "Research",
+          "discoveredAt": "2026-09-11T07:19:27.861Z",
+          "retrievedAt": "2026-09-11T07:19:27.861Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "80ea758287ed6fa94594760c",
+          "sourceId": "ero",
+          "url": "https://www.ero.govt.nz/about-us/news/not-sure-who-to-contact-from-1-september-contact-ero-for-reviews-concerns-and-regulatory-matters",
+          "title": "Not sure who to contact? From 1 September, contact ERO for reviews, concerns and regulatory matters.",
+          "excerpt": "",
+          "publishedAt": "2026-09-01T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Funding & policy"
+          ],
+          "signal": "Research",
+          "discoveredAt": "2026-09-11T07:19:27.861Z",
+          "retrievedAt": "2026-09-11T07:19:27.861Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "128f30389ccabd87618eedf8",
+          "sourceId": "ero",
+          "url": "https://www.ero.govt.nz/about-us/news/we-ve-launched-a-new-page-on-ero-s-incoming-regulatory-responsibilities",
+          "title": "We’ve launched a new page on ERO’s incoming regulatory responsibilities",
+          "excerpt": "",
+          "publishedAt": "2026-07-30T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Funding & policy"
+          ],
+          "signal": "Research",
+          "discoveredAt": "2026-09-11T07:19:27.861Z",
+          "retrievedAt": "2026-09-11T07:19:27.861Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "cf4a28118743cad29438ffa7",
+          "sourceId": "ero",
+          "url": "https://www.ero.govt.nz/about-us/news/ero-provides-a-new-guide-to-help-parents-choose-a-school",
+          "title": "ERO provides a new guide to help parents choose a school",
+          "excerpt": "",
+          "publishedAt": "2026-05-12T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Research",
+          "discoveredAt": "2026-09-11T07:19:27.861Z",
+          "retrievedAt": "2026-09-11T07:19:27.861Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "d6059a52ae20d81dce89da10",
+          "sourceId": "ero",
+          "url": "https://www.ero.govt.nz/about-us/news/ero-issuing-new-school-reports-from-term-2-focused-on-providing-clarity-for-parents-to-understand-their-school-performance",
+          "title": "ERO issuing new school reports from Term 2, focused on providing clarity for parents to understand their school performance",
+          "excerpt": "",
+          "publishedAt": "2026-03-17T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Research",
+          "discoveredAt": "2026-09-11T07:19:27.861Z",
+          "retrievedAt": "2026-09-11T07:19:27.861Z",
+          "method": "HTML index + publication metadata"
+        }
+      ]
+    },
+    {
+      "id": "nzqa",
+      "checkedAt": "2026-09-11T07:22:38.226Z",
+      "status": "healthy",
+      "count": 11,
+      "added": 0,
+      "method": "HTML discovery · robots respected",
+      "records": [
+        {
+          "id": "2d30b12b7ebc6357ee192b3c",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/new-appointment-to-the-nzqa-board-2/",
+          "title": "New appointment to the NZQA Board",
+          "excerpt": "The Minister of Education has appointed Tanuvasa Fa’alogo Rosemary (Rosi) Fitzpatrick to the NZQA Board.",
+          "publishedAt": "2026-08-28T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Funding & policy"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:32.470Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "609fac1bc37e2edc8e83c532",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/nzqa-acting-chief-executive-appointed/",
+          "title": "NZQA Chief Executive appointed",
+          "excerpt": "Christian Hawkesby has been appointed as acting Chief Executive of NZQA.",
+          "publishedAt": "2026-08-20T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:32.470Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "36cab7905edd20fbf557177d",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/consultation-opens-on-describing-tertiary-education-provider-quality/",
+          "title": "Consultation opens on describing tertiary education provider quality",
+          "excerpt": "NZQA has begun consultation on how the quality of tertiary education providers could be described, summarised and communicated as part of the new integrated Quality Assurance Framework.",
+          "publishedAt": "2026-08-10T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Tertiary & skills"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:32.470Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "248dc26928f60af43e1b671c",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/remembering-eve-mcmahon/",
+          "title": "Remembering Eve McMahon",
+          "excerpt": "It is with great sadness that NZQA acknowledges the passing of Eve McMahon, former Deputy Chief Executive, Quality Assurance.",
+          "publishedAt": "2026-08-05T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:32.470Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "4605f4cfdd8f6a481dd7b1bb",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/new-english-language-assessment-resources/",
+          "title": "New English language assessment resources",
+          "excerpt": "",
+          "publishedAt": "2026-07-17T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:32.470Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "218588b89aada823dfa2be99",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/new-appointment-to-the-nzqa-board/",
+          "title": "New appointment to the NZQA Board",
+          "excerpt": "The Minister of Education, Hon Erica Stanford, has appointed Ravi Nyayapati to the NZQA Board.",
+          "publishedAt": "2026-07-13T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Funding & policy"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:32.470Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "4367c4729f00dacdbef63d73",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/review-of-te-reo-maori-me-nga-tikanga-qualifications-levels-4-6/",
+          "title": "Review of Te Reo Māori me ngā Tikanga qualifications",
+          "excerpt": "",
+          "publishedAt": "2026-07-03T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment",
+            "Māori & Pacific"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:32.470Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "a95b5f1278ac042dc00ff46e",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/changes-to-the-nzqa-board-2/",
+          "title": "Changes to the NZQA Board",
+          "excerpt": "The Minister of Education, Hon Erica Stanford, has appointed Dame Susan Hassall DNZM JP to the NZQA Board.",
+          "publishedAt": "2026-06-18T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Funding & policy"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:03:32.470Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "d3058cd8e30a91a25a1bd29c",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/new-insights-paper-explores-ncea-co-requisite-assessments/",
+          "title": "New Insights paper explores NCEA co-requisite assessments",
+          "excerpt": "NZQA has published a new Insights paper about the NCEA co-requisite assessments, which have been the recommended option for students to meet NCEA Literacy and Numeracy requirements since 2023.",
+          "publishedAt": "2026-06-11T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:34.778Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "91ec0f0f598d9e4029acf271",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/te-hono-o-te-kahurangi-aromatai/",
+          "title": "Te Hono o Te Kahurangi Aromātai",
+          "excerpt": "",
+          "publishedAt": "2026-06-03T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:34.778Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        },
+        {
+          "id": "c5fb6a994cf4a35ec7b28b7e",
+          "sourceId": "nzqa",
+          "url": "https://www2.nzqa.govt.nz/about-us/news/nzqa-releases-ncea-ue-and-scholarship-report-for-2025/",
+          "title": "NZQA releases NCEA, UE and Scholarship Report for 2025",
+          "excerpt": "",
+          "publishedAt": "2026-05-14T00:00:00.000Z",
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment",
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:34.778Z",
+          "retrievedAt": "2026-09-11T07:22:38.226Z",
+          "method": "HTML index + publication metadata"
+        }
+      ]
+    },
+    {
+      "id": "tec",
+      "checkedAt": "2026-09-11T07:19:48.582Z",
+      "status": "blocked",
+      "error": "Publisher bot verification; collection stopped.",
+      "count": 0,
+      "added": 0,
+      "method": "HTML discovery · robots respected",
+      "records": []
+    },
+    {
+      "id": "beehive",
+      "checkedAt": "2026-09-11T07:19:48.664Z",
+      "status": "blocked",
+      "error": "Publisher bot verification; collection stopped.",
+      "count": 0,
+      "added": 0,
+      "method": "HTML discovery · robots respected",
+      "records": []
+    },
+    {
+      "id": "rnz",
+      "checkedAt": "2026-09-11T07:19:48.742Z",
+      "status": "healthy",
+      "count": 8,
+      "added": 8,
+      "method": "HTML discovery · robots respected",
+      "records": [
+        {
+          "id": "1a9aff2d6190c7881fc1b96e",
+          "sourceId": "rnz",
+          "url": "https://www.rnz.co.nz/news/education/1341791/nz-government-agencies-leaving-door-open-to-hackers-cyber-security-company-warns",
+          "title": "NZ government agencies leaving door open to hackers, cyber security company warns",
+          "excerpt": "",
+          "publishedAt": null,
+          "documents": [],
+          "topics": [
+            "Funding & policy"
+          ],
+          "signal": "Policy change",
+          "discoveredAt": "2026-09-11T07:19:48.742Z",
+          "retrievedAt": "2026-09-11T07:19:48.742Z",
+          "method": "HTML index · headline only"
+        },
+        {
+          "id": "d5cc8e4833b346c85f7423e1",
+          "sourceId": "rnz",
+          "url": "https://www.rnz.co.nz/news/education/1337364/parent-goes-to-ombudsman-over-school-donations",
+          "title": "Parent goes to Ombudsman over school donations",
+          "excerpt": "",
+          "publishedAt": null,
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:48.742Z",
+          "retrievedAt": "2026-09-11T07:19:48.742Z",
+          "method": "HTML index · headline only"
+        },
+        {
+          "id": "2ca220590b54c277b7756968",
+          "sourceId": "rnz",
+          "url": "https://www.rnz.co.nz/news/education/1323317/less-than-half-of-pacific-year-4-students-meet-minimum-reading-benchmarks-report-finds",
+          "title": "Less than half of Pacific Year 4 students meet minimum reading benchmarks, report finds",
+          "excerpt": "",
+          "publishedAt": null,
+          "documents": [],
+          "topics": [
+            "Māori & Pacific",
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:48.742Z",
+          "retrievedAt": "2026-09-11T07:19:48.742Z",
+          "method": "HTML index · headline only"
+        },
+        {
+          "id": "a88df5c8805b5d9d39d89446",
+          "sourceId": "rnz",
+          "url": "https://www.rnz.co.nz/news/education/1319439/dozens-of-academic-papers-have-references-made-up-by-ai-research",
+          "title": "Dozens of academic papers have references made up by AI - research",
+          "excerpt": "",
+          "publishedAt": null,
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:48.742Z",
+          "retrievedAt": "2026-09-11T07:19:48.742Z",
+          "method": "HTML index · headline only"
+        },
+        {
+          "id": "9a1186bc1f701d7caeb49ccd",
+          "sourceId": "rnz",
+          "url": "https://www.rnz.co.nz/news/education/1311462/university-of-auckland-announces-review-into-sexual-harassment-complaints-processes",
+          "title": "University of Auckland announces review into sexual harassment complaints processes",
+          "excerpt": "",
+          "publishedAt": null,
+          "documents": [],
+          "topics": [
+            "Tertiary & skills"
+          ],
+          "signal": "Policy change",
+          "discoveredAt": "2026-09-11T07:19:48.742Z",
+          "retrievedAt": "2026-09-11T07:19:48.742Z",
+          "method": "HTML index · headline only"
+        },
+        {
+          "id": "735fcddba827a574e8999b0a",
+          "sourceId": "rnz",
+          "url": "https://www.rnz.co.nz/news/education/1310166/cyber-bullying-wagging-school-damage-kiwi-teens-international-test-results",
+          "title": "Cyber-bullying, wagging school damage Kiwi teens' international test results",
+          "excerpt": "",
+          "publishedAt": null,
+          "documents": [],
+          "topics": [
+            "Research & evidence"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:48.742Z",
+          "retrievedAt": "2026-09-11T07:19:48.742Z",
+          "method": "HTML index · headline only"
+        },
+        {
+          "id": "48b00ee5ef104317f98ec690",
+          "sourceId": "rnz",
+          "url": "https://www.rnz.co.nz/news/education/1308226/nz-sitting-below-group-of-world-leaders-when-it-comes-to-reading-science-and-maths",
+          "title": "NZ sitting below group of world-leaders when it comes to reading, science and maths",
+          "excerpt": "",
+          "publishedAt": null,
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:48.742Z",
+          "retrievedAt": "2026-09-11T07:19:48.742Z",
+          "method": "HTML index · headline only"
+        },
+        {
+          "id": "2eeb9e233b56bb6360fecf2a",
+          "sourceId": "rnz",
+          "url": "https://www.rnz.co.nz/news/education/1305427/nz-science-and-maths-students-turn-around-20-years-of-decline-in-international-tests",
+          "title": "NZ science and maths students turn around 20 years of decline in international tests",
+          "excerpt": "",
+          "publishedAt": null,
+          "documents": [],
+          "topics": [
+            "Curriculum & assessment"
+          ],
+          "signal": "Sector update",
+          "discoveredAt": "2026-09-11T07:19:48.742Z",
+          "retrievedAt": "2026-09-11T07:19:48.742Z",
+          "method": "HTML index · headline only"
+        }
+      ]
+    },
+    {
       "id": "nzcer",
       "checkedAt": "2026-09-11T07:23:22.874Z",
       "status": "healthy",
@@ -255,634 +883,6 @@
           "discoveredAt": "2026-09-11T07:23:22.874Z",
           "retrievedAt": "2026-09-11T07:23:22.874Z",
           "method": "HTML index + publication metadata"
-        }
-      ]
-    },
-    {
-      "id": "ncea",
-      "checkedAt": "2026-09-11T07:22:25.378Z",
-      "status": "healthy",
-      "count": 10,
-      "added": 0,
-      "method": "HTML discovery · robots respected",
-      "records": [
-        {
-          "id": "fba9cdc81e04f36d185eacec",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/revised-achievement-standards-and-supporting-materials-assessment-2027",
-          "title": "Revised Achievement Standards and supporting materials for assessment in 2027",
-          "excerpt": "Available now for planning purposes.",
-          "publishedAt": "2026-09-11T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:16.501Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "52b195548623f8177fdce1f5",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/additional-senior-secondary-subjects-open-feedback",
-          "title": "Additional senior secondary subjects open for feedback",
-          "excerpt": "Check out the additional new senior secondary subjects and give us your feedback.",
-          "publishedAt": "2026-08-21T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:16.501Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "834db78441e92d0051f24e74",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/new-industry-led-subjects-announced-senior-secondary-students",
-          "title": "New industry-led subjects announced for senior secondary students",
-          "excerpt": "New industry-led subjects announced for senior secondary students.",
-          "publishedAt": "2026-08-06T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Policy change",
-          "discoveredAt": "2026-09-11T07:03:16.501Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "b387757c1ee63f34e659da98",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/third-group-senior-secondary-subjects-open-feedback",
-          "title": "Third group of senior secondary subjects open for feedback",
-          "excerpt": "Check out the third group of new senior secondary subjects and give us your feedback.",
-          "publishedAt": "2026-07-06T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:16.501Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "8dedfe300e4c9863cd18a587",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/second-group-senior-secondary-subjects-open-feedback",
-          "title": "Second group of senior secondary subjects open for feedback",
-          "excerpt": "Check out the second group of new senior secondary subjects and give us your feedback.",
-          "publishedAt": "2026-06-10T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:16.501Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "ec29d3c494b8807d75137271",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/further-details-new-senior-secondary-qualifications",
-          "title": "Further details of new senior secondary qualifications",
-          "excerpt": "Further details of new senior secondary qualifications",
-          "publishedAt": "2026-05-16T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:16.501Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "2e6e08d6d1241dcee7283877",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/taumata-matauranga-motu-ka-taea-ncea-now-available-nceaeducation",
-          "title": "TAUMATA MĀTAURANGA Ā-MOTU KA TAEA | NCEA – now available on NCEA.education",
-          "excerpt": "Level 2 and Level 3 assessment resources for Te Marautanga o Aotearoa can now be found on NCEA.education.",
-          "publishedAt": "2026-05-08T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:16.501Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "0d588070f9f3a6a8da308ba6",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/ncea-update-structure-new-qualification-system-agreed",
-          "title": "NCEA update: structure of new qualification system agreed",
-          "excerpt": "Information regarding an update to NCEA and structure of a new qualification system.",
-          "publishedAt": "2026-03-26T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Policy change",
-          "discoveredAt": "2026-09-11T07:03:16.501Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "8eeaee49bbbdfef21ecd4ffe",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/new-level-1-vocabulary-lists-vagahau-niue-spoken-texts",
-          "title": "New Level 1 Vocabulary Lists & Vagahau Niue Spoken Texts",
-          "excerpt": "Information regarding new vocabulary lists and spoken text resources for Learning Languages.",
-          "publishedAt": "2026-03-23T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:17.025Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "0a5e73a77fc044d212e127c6",
-          "sourceId": "ncea",
-          "url": "https://ncea.education.govt.nz/whats-new/reviewed-nzc-tmoa-achievement-standards-and-assessment-materials-published-2026",
-          "title": "Reviewed NZC & TMoA Achievement Standards and assessment materials published for 2026",
-          "excerpt": "On each subject page, use the Recent Changes button to see a summary of updates.",
-          "publishedAt": "2026-01-21T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:17.025Z",
-          "retrievedAt": "2026-09-11T07:22:25.378Z",
-          "method": "HTML index + publication metadata"
-        }
-      ]
-    },
-    {
-      "id": "nzqa",
-      "checkedAt": "2026-09-11T07:22:38.226Z",
-      "status": "healthy",
-      "count": 11,
-      "added": 0,
-      "method": "HTML discovery · robots respected",
-      "records": [
-        {
-          "id": "2d30b12b7ebc6357ee192b3c",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/new-appointment-to-the-nzqa-board-2/",
-          "title": "New appointment to the NZQA Board",
-          "excerpt": "The Minister of Education has appointed Tanuvasa Fa’alogo Rosemary (Rosi) Fitzpatrick to the NZQA Board.",
-          "publishedAt": "2026-08-28T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Funding & policy"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:32.470Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "609fac1bc37e2edc8e83c532",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/nzqa-acting-chief-executive-appointed/",
-          "title": "NZQA Chief Executive appointed",
-          "excerpt": "Christian Hawkesby has been appointed as acting Chief Executive of NZQA.",
-          "publishedAt": "2026-08-20T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:32.470Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "36cab7905edd20fbf557177d",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/consultation-opens-on-describing-tertiary-education-provider-quality/",
-          "title": "Consultation opens on describing tertiary education provider quality",
-          "excerpt": "NZQA has begun consultation on how the quality of tertiary education providers could be described, summarised and communicated as part of the new integrated Quality Assurance Framework.",
-          "publishedAt": "2026-08-10T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Tertiary & skills"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:32.470Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "248dc26928f60af43e1b671c",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/remembering-eve-mcmahon/",
-          "title": "Remembering Eve McMahon",
-          "excerpt": "It is with great sadness that NZQA acknowledges the passing of Eve McMahon, former Deputy Chief Executive, Quality Assurance.",
-          "publishedAt": "2026-08-05T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:32.470Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "4605f4cfdd8f6a481dd7b1bb",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/new-english-language-assessment-resources/",
-          "title": "New English language assessment resources",
-          "excerpt": "",
-          "publishedAt": "2026-07-17T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:32.470Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "218588b89aada823dfa2be99",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/new-appointment-to-the-nzqa-board/",
-          "title": "New appointment to the NZQA Board",
-          "excerpt": "The Minister of Education, Hon Erica Stanford, has appointed Ravi Nyayapati to the NZQA Board.",
-          "publishedAt": "2026-07-13T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Funding & policy"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:32.470Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "4367c4729f00dacdbef63d73",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/review-of-te-reo-maori-me-nga-tikanga-qualifications-levels-4-6/",
-          "title": "Review of Te Reo Māori me ngā Tikanga qualifications",
-          "excerpt": "",
-          "publishedAt": "2026-07-03T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment",
-            "Māori & Pacific"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:32.470Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "a95b5f1278ac042dc00ff46e",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/changes-to-the-nzqa-board-2/",
-          "title": "Changes to the NZQA Board",
-          "excerpt": "The Minister of Education, Hon Erica Stanford, has appointed Dame Susan Hassall DNZM JP to the NZQA Board.",
-          "publishedAt": "2026-06-18T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Funding & policy"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:03:32.470Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "d3058cd8e30a91a25a1bd29c",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/new-insights-paper-explores-ncea-co-requisite-assessments/",
-          "title": "New Insights paper explores NCEA co-requisite assessments",
-          "excerpt": "NZQA has published a new Insights paper about the NCEA co-requisite assessments, which have been the recommended option for students to meet NCEA Literacy and Numeracy requirements since 2023.",
-          "publishedAt": "2026-06-11T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:34.778Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "91ec0f0f598d9e4029acf271",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/te-hono-o-te-kahurangi-aromatai/",
-          "title": "Te Hono o Te Kahurangi Aromātai",
-          "excerpt": "",
-          "publishedAt": "2026-06-03T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:34.778Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "c5fb6a994cf4a35ec7b28b7e",
-          "sourceId": "nzqa",
-          "url": "https://www2.nzqa.govt.nz/about-us/news/nzqa-releases-ncea-ue-and-scholarship-report-for-2025/",
-          "title": "NZQA releases NCEA, UE and Scholarship Report for 2025",
-          "excerpt": "",
-          "publishedAt": "2026-05-14T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment",
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:34.778Z",
-          "retrievedAt": "2026-09-11T07:22:38.226Z",
-          "method": "HTML index + publication metadata"
-        }
-      ]
-    },
-    {
-      "id": "ministry",
-      "checkedAt": "2026-09-11T07:19:15.342Z",
-      "status": "error",
-      "error": "No matching publication links found; publisher layout needs review",
-      "count": 0,
-      "added": 0,
-      "method": "HTML discovery · robots respected",
-      "records": []
-    },
-    {
-      "id": "counts",
-      "checkedAt": "2026-09-11T07:19:27.765Z",
-      "status": "blocked",
-      "error": "HTTP 403: publisher blocked automated access",
-      "count": 0,
-      "added": 0,
-      "method": "HTML discovery · robots respected",
-      "records": []
-    },
-    {
-      "id": "ero",
-      "checkedAt": "2026-09-11T07:19:27.861Z",
-      "status": "healthy",
-      "count": 5,
-      "added": 5,
-      "method": "HTML discovery · robots respected",
-      "records": [
-        {
-          "id": "f286b51a18d3b43ceb6f35cf",
-          "sourceId": "ero",
-          "url": "https://www.ero.govt.nz/about-us/news/ece-regulatory-changes-information-webinars",
-          "title": "ECE Regulatory Changes: Information Webinars | ERO",
-          "excerpt": "",
-          "publishedAt": "2026-09-02T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Funding & policy",
-            "Early learning"
-          ],
-          "signal": "Research",
-          "discoveredAt": "2026-09-11T07:19:27.861Z",
-          "retrievedAt": "2026-09-11T07:19:27.861Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "80ea758287ed6fa94594760c",
-          "sourceId": "ero",
-          "url": "https://www.ero.govt.nz/about-us/news/not-sure-who-to-contact-from-1-september-contact-ero-for-reviews-concerns-and-regulatory-matters",
-          "title": "Not sure who to contact? From 1 September, contact ERO for reviews, concerns and regulatory matters.",
-          "excerpt": "",
-          "publishedAt": "2026-09-01T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Funding & policy"
-          ],
-          "signal": "Research",
-          "discoveredAt": "2026-09-11T07:19:27.861Z",
-          "retrievedAt": "2026-09-11T07:19:27.861Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "128f30389ccabd87618eedf8",
-          "sourceId": "ero",
-          "url": "https://www.ero.govt.nz/about-us/news/we-ve-launched-a-new-page-on-ero-s-incoming-regulatory-responsibilities",
-          "title": "We’ve launched a new page on ERO’s incoming regulatory responsibilities",
-          "excerpt": "",
-          "publishedAt": "2026-07-30T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Funding & policy"
-          ],
-          "signal": "Research",
-          "discoveredAt": "2026-09-11T07:19:27.861Z",
-          "retrievedAt": "2026-09-11T07:19:27.861Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "cf4a28118743cad29438ffa7",
-          "sourceId": "ero",
-          "url": "https://www.ero.govt.nz/about-us/news/ero-provides-a-new-guide-to-help-parents-choose-a-school",
-          "title": "ERO provides a new guide to help parents choose a school",
-          "excerpt": "",
-          "publishedAt": "2026-05-12T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Research",
-          "discoveredAt": "2026-09-11T07:19:27.861Z",
-          "retrievedAt": "2026-09-11T07:19:27.861Z",
-          "method": "HTML index + publication metadata"
-        },
-        {
-          "id": "d6059a52ae20d81dce89da10",
-          "sourceId": "ero",
-          "url": "https://www.ero.govt.nz/about-us/news/ero-issuing-new-school-reports-from-term-2-focused-on-providing-clarity-for-parents-to-understand-their-school-performance",
-          "title": "ERO issuing new school reports from Term 2, focused on providing clarity for parents to understand their school performance",
-          "excerpt": "",
-          "publishedAt": "2026-03-17T00:00:00.000Z",
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Research",
-          "discoveredAt": "2026-09-11T07:19:27.861Z",
-          "retrievedAt": "2026-09-11T07:19:27.861Z",
-          "method": "HTML index + publication metadata"
-        }
-      ]
-    },
-    {
-      "id": "tec",
-      "checkedAt": "2026-09-11T07:19:48.582Z",
-      "status": "blocked",
-      "error": "Publisher bot verification; collection stopped.",
-      "count": 0,
-      "added": 0,
-      "method": "HTML discovery · robots respected",
-      "records": []
-    },
-    {
-      "id": "beehive",
-      "checkedAt": "2026-09-11T07:19:48.664Z",
-      "status": "blocked",
-      "error": "Publisher bot verification; collection stopped.",
-      "count": 0,
-      "added": 0,
-      "method": "HTML discovery · robots respected",
-      "records": []
-    },
-    {
-      "id": "rnz",
-      "checkedAt": "2026-09-11T07:19:48.742Z",
-      "status": "healthy",
-      "count": 8,
-      "added": 8,
-      "method": "HTML discovery · robots respected",
-      "records": [
-        {
-          "id": "1a9aff2d6190c7881fc1b96e",
-          "sourceId": "rnz",
-          "url": "https://www.rnz.co.nz/news/education/1341791/nz-government-agencies-leaving-door-open-to-hackers-cyber-security-company-warns",
-          "title": "NZ government agencies leaving door open to hackers, cyber security company warns",
-          "excerpt": "",
-          "publishedAt": null,
-          "documents": [],
-          "topics": [
-            "Funding & policy"
-          ],
-          "signal": "Policy change",
-          "discoveredAt": "2026-09-11T07:19:48.742Z",
-          "retrievedAt": "2026-09-11T07:19:48.742Z",
-          "method": "HTML index · headline only"
-        },
-        {
-          "id": "d5cc8e4833b346c85f7423e1",
-          "sourceId": "rnz",
-          "url": "https://www.rnz.co.nz/news/education/1337364/parent-goes-to-ombudsman-over-school-donations",
-          "title": "Parent goes to Ombudsman over school donations",
-          "excerpt": "",
-          "publishedAt": null,
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:48.742Z",
-          "retrievedAt": "2026-09-11T07:19:48.742Z",
-          "method": "HTML index · headline only"
-        },
-        {
-          "id": "2ca220590b54c277b7756968",
-          "sourceId": "rnz",
-          "url": "https://www.rnz.co.nz/news/education/1323317/less-than-half-of-pacific-year-4-students-meet-minimum-reading-benchmarks-report-finds",
-          "title": "Less than half of Pacific Year 4 students meet minimum reading benchmarks, report finds",
-          "excerpt": "",
-          "publishedAt": null,
-          "documents": [],
-          "topics": [
-            "Māori & Pacific",
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:48.742Z",
-          "retrievedAt": "2026-09-11T07:19:48.742Z",
-          "method": "HTML index · headline only"
-        },
-        {
-          "id": "a88df5c8805b5d9d39d89446",
-          "sourceId": "rnz",
-          "url": "https://www.rnz.co.nz/news/education/1319439/dozens-of-academic-papers-have-references-made-up-by-ai-research",
-          "title": "Dozens of academic papers have references made up by AI - research",
-          "excerpt": "",
-          "publishedAt": null,
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:48.742Z",
-          "retrievedAt": "2026-09-11T07:19:48.742Z",
-          "method": "HTML index · headline only"
-        },
-        {
-          "id": "9a1186bc1f701d7caeb49ccd",
-          "sourceId": "rnz",
-          "url": "https://www.rnz.co.nz/news/education/1311462/university-of-auckland-announces-review-into-sexual-harassment-complaints-processes",
-          "title": "University of Auckland announces review into sexual harassment complaints processes",
-          "excerpt": "",
-          "publishedAt": null,
-          "documents": [],
-          "topics": [
-            "Tertiary & skills"
-          ],
-          "signal": "Policy change",
-          "discoveredAt": "2026-09-11T07:19:48.742Z",
-          "retrievedAt": "2026-09-11T07:19:48.742Z",
-          "method": "HTML index · headline only"
-        },
-        {
-          "id": "735fcddba827a574e8999b0a",
-          "sourceId": "rnz",
-          "url": "https://www.rnz.co.nz/news/education/1310166/cyber-bullying-wagging-school-damage-kiwi-teens-international-test-results",
-          "title": "Cyber-bullying, wagging school damage Kiwi teens' international test results",
-          "excerpt": "",
-          "publishedAt": null,
-          "documents": [],
-          "topics": [
-            "Research & evidence"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:48.742Z",
-          "retrievedAt": "2026-09-11T07:19:48.742Z",
-          "method": "HTML index · headline only"
-        },
-        {
-          "id": "48b00ee5ef104317f98ec690",
-          "sourceId": "rnz",
-          "url": "https://www.rnz.co.nz/news/education/1308226/nz-sitting-below-group-of-world-leaders-when-it-comes-to-reading-science-and-maths",
-          "title": "NZ sitting below group of world-leaders when it comes to reading, science and maths",
-          "excerpt": "",
-          "publishedAt": null,
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:48.742Z",
-          "retrievedAt": "2026-09-11T07:19:48.742Z",
-          "method": "HTML index · headline only"
-        },
-        {
-          "id": "2eeb9e233b56bb6360fecf2a",
-          "sourceId": "rnz",
-          "url": "https://www.rnz.co.nz/news/education/1305427/nz-science-and-maths-students-turn-around-20-years-of-decline-in-international-tests",
-          "title": "NZ science and maths students turn around 20 years of decline in international tests",
-          "excerpt": "",
-          "publishedAt": null,
-          "documents": [],
-          "topics": [
-            "Curriculum & assessment"
-          ],
-          "signal": "Sector update",
-          "discoveredAt": "2026-09-11T07:19:48.742Z",
-          "retrievedAt": "2026-09-11T07:19:48.742Z",
-          "method": "HTML index · headline only"
         }
       ]
     }
@@ -1682,5 +1682,38 @@
       "retrievedAt": "2026-09-11T07:22:25.378Z",
       "method": "HTML index + publication metadata"
     }
-  ]
+  ],
+  "brief": {
+    "generatedAt": "2026-09-11T07:27:59.385Z",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "recordCount": 29,
+    "takeaways": [
+      {
+        "title": "Revised Achievement Standards",
+        "summary": "NCEA Education released revised standards. They are available now.",
+        "question": "How will the revised Achievement Standards impact student assessment in 2027?",
+        "evidenceIds": [
+          "fba9cdc81e04f36d185eacec"
+        ]
+      },
+      {
+        "title": "New Industry-Led Subjects",
+        "summary": "NCEA Education announced new subjects. They are industry-led.",
+        "question": "What are the potential benefits and challenges of implementing industry-led subjects in senior secondary education?",
+        "evidenceIds": [
+          "834db78441e92d0051f24e74",
+          "52b195548623f8177fdce1f5",
+          "b387757c1ee63f34e659da98"
+        ]
+      },
+      {
+        "title": "Cyber Security Concerns",
+        "summary": "RNZ · Education reported on cyber security. Agencies may be vulnerable.",
+        "question": "This may indicate a need for improved cyber security measures in government agencies, but what specific steps can be taken to address these concerns?",
+        "evidenceIds": [
+          "1a9aff2d6190c7881fc1b96e"
+        ]
+      }
+    ]
+  }
 }

@@ -1,0 +1,31 @@
+name: Collect public education metadata
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: education-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    # Evaluated before a runner is allocated. Private repos and forks fail closed.
+    if: github.repository == 'TravisHunting/EducationNewsHubNZ' && github.event.repository.private == false && github.event.repository.visibility == 'public' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      # No npm install, paid AI, caches, artifacts, service credentials or deployments.
+      - name: Reserve hourly slot and collect bounded metadata
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/scheduled-collect.mjs
+
