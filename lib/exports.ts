@@ -1,0 +1,15 @@
+import type {RecordItem,Dataset} from './types';
+import {SOURCES} from './sources.mjs';
+import {researchPrompt,topicInsights} from './insights';
+export type ExportFormat='markdown'|'json'|'jsonl'|'csv';
+export function exportPack(records:RecordItem[],format:ExportFormat,data:Dataset){
+ const generatedAt=new Date().toISOString();const sourceIds=new Set(records.map(r=>r.sourceId));const sources=SOURCES.filter(s=>sourceIds.has(s.id));
+ const enriched=records.map(r=>({...r,sourceName:SOURCES.find(s=>s.id===r.sourceId)?.name||r.sourceId,contentScope:'Headline and short publisher metadata; not full article text'}));
+ const manifest={schemaVersion:'1.0',generatedAt,collectionLastCheckedAt:data.generatedAt,recordCount:records.length,coverage:'Selected public NZ education sources. Collection is incomplete and subject to publisher access restrictions.',datePolicy:'publishedAt is null when not explicitly supplied; discoveredAt and retrievedAt are collection timestamps.',sourcePolicies:sources.map(s=>({id:s.id,name:s.name,url:s.url,policy:s.policy})),sourceHealth:data.sources.map(s=>({id:s.id,status:s.status,checkedAt:s.checkedAt,error:s.error}))};
+ if(format==='json')return {text:JSON.stringify({manifest,researchPrompt,records:enriched},null,2),mime:'application/json',ext:'json'};
+ if(format==='jsonl')return {text:enriched.map(r=>JSON.stringify({schemaVersion:'1.0',exportedAt:generatedAt,...r})).join('\n')+'\n',mime:'application/x-ndjson',ext:'jsonl'};
+ if(format==='csv'){const fields=['id','sourceName','title','url','publishedAt','discoveredAt','retrievedAt','signal','topics','excerpt','documents'];const escape=(value:unknown)=>{let t=typeof value==='object'?JSON.stringify(value):String(value??'');if(/^[\s]*[=+@-]/.test(t))t="'"+t;return '"'+t.replaceAll('"','""')+'"'};return {text:'\uFEFF'+[fields.join(','),...enriched.map(r=>fields.map(f=>escape(r[f as keyof typeof r])).join(','))].join('\r\n'),mime:'text/csv',ext:'csv'}};
+ const lines=['# New Zealand Education Intelligence','',`Exported: ${generatedAt}`,`Records: ${records.length}`,`Collection last checked: ${data.generatedAt}`,'','## Scope','',manifest.coverage,'',manifest.datePolicy,'','## Research instructions','',researchPrompt,'','## Topic coverage','',...topicInsights(records).filter(x=>x.count).map(x=>`- ${x.topic}: ${x.count} records from ${x.sources} sources.`),'','## Evidence records',''];
+ for(const r of enriched){lines.push(`### ${r.title}`,'',`- Record ID: ${r.id}`,`- Source: ${r.sourceName}`,`- Original: ${r.url}`,`- Published: ${r.publishedAt||'Not supplied'}`,`- First collected: ${r.discoveredAt}`,`- Last retrieved: ${r.retrievedAt}`,`- Topics: ${r.topics.join('; ')}`,`- Content scope: ${r.contentScope}`,'',r.excerpt||'Headline only; open the original for context.','');for(const d of r.documents)lines.push(`- Publisher document (${d.format}): ${d.url}`);lines.push('---','')}
+ lines.push('## Source reuse notes','',...sources.map(s=>`- ${s.name}: ${s.policy}`));return {text:lines.join('\n'),mime:'text/markdown',ext:'md'};
+}

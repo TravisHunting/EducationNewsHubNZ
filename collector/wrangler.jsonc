@@ -1,0 +1,11 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "education-intelligence-collector",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "ai": {"binding":"AI"},
+  "kv_namespaces": [{"binding":"EVIDENCE","id":"9af516f6a5fd4b2f9de415535117b6c8"}],
+  "triggers": {"crons":["*/15 * * * *"]},
+  "observability": {"enabled":true,"head_sampling_rate":1}
+}

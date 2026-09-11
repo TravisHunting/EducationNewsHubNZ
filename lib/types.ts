@@ -1,0 +1,3 @@
+export type RecordItem = { id:string; sourceId:string; title:string; url:string; excerpt:string; publishedAt:string|null; discoveredAt:string; retrievedAt:string; topics:string[]; signal:'Policy change'|'Research'|'Sector update'; documents:{title:string;url:string;format:string}[]; method:string };
+export type SourceState = { id:string; checkedAt:string; status:'healthy'|'blocked'|'error'; error?:string; count:number; added:number; method:string; records:RecordItem[] };
+export type Dataset = { version:string; generatedAt:string; sources:SourceState[]; records:RecordItem[]; mode?:'live'|'snapshot'; warning?:string; brief?:{generatedAt:string;model:string;recordCount:number;takeaways:{title:string;summary:string;question:string;evidenceIds:string[]}[]} };
