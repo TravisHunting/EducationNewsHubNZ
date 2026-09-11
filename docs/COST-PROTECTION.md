@@ -58,3 +58,10 @@ Sources checked:
 - GitHub Actions billing: https://docs.github.com/en/billing/concepts/product-billing/github-actions
 - GitHub-hosted runners: https://docs.github.com/en/actions/reference/runners/github-hosted-runners
 - Scheduled workflow behavior: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule
+
+Final collector verification:
+- First workflow run completed successfully and published 51 records: https://github.com/TravisHunting/EducationNewsHubNZ/actions/runs/34583779290
+- Second run completed without scraping; its log confirmed “Hourly cooldown active; no sources contacted.”: https://github.com/TravisHunting/EducationNewsHubNZ/actions/runs/34583968697
+- The reservation remained fixed at 09:21:41 UTC, next allowed 10:21:41 UTC, so the repeat run did not reset or consume another slot.
+- Sixteen automated tests pass, including a Workers-runtime regression for the saved-data reader. Redirects are rejected using manual mode and the response status, without following them.
+- A browser fallback for the subscription audit reached Cloudflare's sign-in page; no authenticated billing session was available. Account subscriptions remain unverified.
