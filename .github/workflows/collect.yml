@@ -1,7 +1,7 @@
 name: Collect public education metadata
 on:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17 17 * * *'
   workflow_dispatch:
 permissions: {}
 concurrency:
@@ -24,7 +24,7 @@ jobs:
           node-version: '22'
           package-manager-cache: false
       # No npm install, paid AI, caches, artifacts, service credentials or deployments.
-      - name: Reserve hourly slot and collect bounded metadata
+      - name: Reserve daily slot and collect bounded metadata
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/scheduled-collect.mjs

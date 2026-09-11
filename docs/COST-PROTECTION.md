@@ -65,3 +65,5 @@ Final collector verification:
 - The reservation remained fixed at 09:21:41 UTC, next allowed 10:21:41 UTC, so the repeat run did not reset or consume another slot.
 - Sixteen automated tests pass, including a Workers-runtime regression for the saved-data reader. Redirects are rejected using manual mode and the response status, without following them.
 - A browser fallback for the subscription audit reached Cloudflare's sign-in page; no authenticated billing session was available. Account subscriptions remain unverified.
+
+Daily schedule update — 12 September 2026: collection is scheduled at 17:17 UTC each day with a rolling 24-hour reservation. Existing one-hour reservations are interpreted using lastStartedAt plus 24 hours, so migration cannot permit an early repeat. All request, storage and runtime budgets remain unchanged.

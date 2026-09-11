@@ -12,9 +12,9 @@ Sites owns the website deployment. `.openai/hosting.json` preserves its identity
 
 `.github/workflows/collect.yml` runs on the public repository's standard `ubuntu-24.04` GitHub-hosted runner. GitHub documents these runners as free for public repositories. The job is skipped before runner allocation unless this is the approved public repository and main branch. The collector independently checks the live repository visibility and refuses private operation.
 
-- Scheduled at minute 17 each hour; owner-triggered dispatches use the same guard. No push, pull-request or public webhook triggers.
-- One concurrency group. A persisted `state.json` reservation on the `collection` branch is updated using a SHA compare-and-swap **before** contacting publishers. Conflicting or malformed state fails closed. Failed jobs do not refund the hourly reservation.
-- At most one batch per rolling 60 minutes. GitHub may delay jobs, so collection can be less frequent. Scheduled public workflows may be disabled after 60 days without repository activity.
+- Scheduled at 17:17 UTC each day (05:17 NZST / 06:17 NZDT); owner-triggered dispatches use the same guard. No push, pull-request or public webhook triggers.
+- One concurrency group. A persisted `state.json` reservation on the `collection` branch is updated using a SHA compare-and-swap **before** contacting publishers. Conflicting or malformed state fails closed. Failed jobs do not refund the daily reservation.
+- At most one batch per rolling 24 hours. GitHub may delay jobs, so collection can be less frequent. Scheduled public workflows may be disabled after 60 days without repository activity.
 - Twelve-minute job timeout; ten-minute process deadline; at most 180 publisher HTTP requests per run; no automatic retry loop.
 - Nine allowlisted sources, at most five publication records processed per source. Each request has a 12-second deadline, bounded redirects and a streaming response-size ceiling.
 - At most 250 records per source and 900,000 bytes for the published snapshot. Oldest records are trimmed to fit. Failed source checks preserve previous records.
@@ -37,6 +37,6 @@ Use Node 22.13 or later: `npm ci`, `npm run dev`, `npm test`, `npm run build`. T
 
 `node scripts/collect.mjs` is an operator-only local snapshot utility, never exposed through the website or used by the scheduled workflow. It does not consume Cloudflare services. `scripts/scheduled-collect.mjs` only runs in the approved GitHub workflow. Keep collection reservations intact; do not reset the branch to bypass cooldowns.
 
-Tests cover parsing, safe redirects, robots compliance, export safety, hourly reservation boundaries, request and storage budgets, cache coalescing, oversized-feed fallback, closed public mutation routes and absence of paid collector deployment configuration. Run `node node_modules/typescript/bin/tsc --noEmit` for type checking.
+Tests cover parsing, safe redirects, robots compliance, export safety, daily reservation boundaries, request and storage budgets, cache coalescing, oversized-feed fallback, closed public mutation routes and absence of paid collector deployment configuration. Run `node node_modules/typescript/bin/tsc --noEmit` for type checking.
 
 Publish using the Sites building and hosting skills: validate, commit, push the exact source to GitHub and Sites, package the build, save a version, deploy to the existing public audience and verify it. No application runtime environment variables or secrets are required. Never add billing-enabled services as a fallback when quotas or source access fail.

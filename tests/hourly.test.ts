@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {canCollect,reserveState,HOUR_MS,budgetedFetch,boundSnapshot,MAX_SNAPSHOT_BYTES} from '../lib/collection-budget.mjs';
+import {canCollect,reserveState,DAY_MS,budgetedFetch,boundSnapshot,MAX_SNAPSHOT_BYTES} from '../lib/collection-budget.mjs';
 import {createDatasetReader,DATA_URL} from '../lib/dataset-reader.mjs';
 import snapshot from '../data/snapshot.json';
 import {POST} from '../app/api/refresh/route';
@@ -8,8 +8,13 @@ import {readFileSync,existsSync} from 'node:fs';
 
 test('persisted reservation enforces the boundary and malformed state fails closed',()=>{
  const now=1_800_000_000_000;const state=reserveState({nextAllowedAt:new Date(now).toISOString()},now);
- assert.equal(canCollect(state,now),false);assert.equal(canCollect(state,now+HOUR_MS-1),false);assert.equal(canCollect(JSON.parse(JSON.stringify(state)),now+HOUR_MS),true);
+ assert.equal(canCollect(state,now),false);assert.equal(canCollect(state,now+DAY_MS-1),false);assert.equal(canCollect(JSON.parse(JSON.stringify(state)),now+DAY_MS),true);
  assert.equal(canCollect({},now),false);assert.equal(canCollect({nextAllowedAt:'broken'},now),false);assert.throws(()=>reserveState(state,now));
+});
+test('old hourly reservations also enforce a full day since the previous run',()=>{
+ const now=1_800_000_000_000;const legacy={lastStartedAt:new Date(now).toISOString(),nextAllowedAt:new Date(now+3600000).toISOString()};
+ assert.equal(canCollect(legacy,now+3600000),false);assert.equal(canCollect(legacy,now+DAY_MS-1),false);assert.equal(canCollect(legacy,now+DAY_MS),true);
+ assert.equal(canCollect({...legacy,lastStartedAt:'invalid'},now+DAY_MS),false);
 });
 test('network budget stops before making an extra request',async()=>{
  let calls=0;const fetcher=budgetedFetch(async()=>{calls++;return new Response('ok')},3);
@@ -39,6 +44,6 @@ test('public refresh never makes an outgoing request',async()=>{
 test('deployment cannot recreate paid collector and workflow uses only a free public runner',()=>{
  assert.equal(existsSync('collector/wrangler.jsonc'),false);
  const manifest=JSON.parse(readFileSync('.openai/hosting.json','utf8'));assert.equal(manifest.d1,null);assert.equal(manifest.r2,null);
- const workflow=readFileSync('.github/workflows/collect.yml','utf8');assert.match(workflow,/github.event.repository.private == false/);assert.match(workflow,/runs-on: ubuntu-24.04/);assert.match(workflow,/timeout-minutes: 12/);assert.match(workflow,/package-manager-cache: false/);
+ const workflow=readFileSync('.github/workflows/collect.yml','utf8');assert.match(workflow,/github.event.repository.private == false/);assert.match(workflow,/runs-on: ubuntu-24.04/);assert.match(workflow,/timeout-minutes: 12/);assert.match(workflow,/cron: '17 17 \* \* \*'/);assert.match(workflow,/package-manager-cache: false/);
  assert.doesNotMatch(workflow,/pull_request:|push:|upload-artifact@|actions\/cache@|CLOUDFLARE_API_TOKEN/);
 });

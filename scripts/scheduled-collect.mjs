@@ -17,11 +17,11 @@ const encode=x=>Buffer.from(JSON.stringify(x)).toString('base64');
 try {
  const repo=await api('');if(repo.private!==false)throw Error('Paid/private repository execution is disabled');
  const gate=await api('/contents/state.json?ref=collection');const state=decode(gate);
- if(!canCollect(state)){console.log('Hourly cooldown active; no sources contacted.');process.exitCode=0;}
+ if(!canCollect(state)){console.log('Daily cooldown active; no sources contacted.');process.exitCode=0;}
  else {
   // GitHub rejects a stale SHA. This persisted compare-and-swap must succeed
   // before any publisher fetch, and a failed job never refunds its reservation.
-  await api('/contents/state.json','PUT',{branch:'collection',sha:gate.sha,message:'Reserve hourly collection slot',content:encode(reserveState(state))});
+  await api('/contents/state.json','PUT',{branch:'collection',sha:gate.sha,message:'Reserve daily collection slot',content:encode(reserveState(state))});
   const saved=await api('/contents/snapshot.json?ref=collection');const previous=decode(saved);
   globalThis.fetch=budgetedFetch(nativeFetch);
   const states=[];
