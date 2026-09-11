@@ -1,4 +1,6 @@
-# Cost protection audit — 11 September 2026
+# Historical cost protection audit — 11 September 2026
+
+> Superseded architecture: the requested update moves scraping and storage into the Sites backend (D1/R2), with GitHub supplying authenticated scheduled triggers only. The inventory below records the September 11 retirement of the separate personal-account collector, not the current Site storage design. See README.md for current limits and tests. Sites archive storage is subject to platform quotas and terms; this audit does not establish a zero-cost guarantee for it.
 
 ## Finding and remediation
 

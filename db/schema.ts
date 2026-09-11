@@ -1,4 +1,8 @@
-// Intentionally empty by default.
-// Add Drizzle tables here when the site actually needs a database.
-// See examples/d1/db/schema.ts for an opt-in example.
-export {};
+import {sqliteTable,text,integer,index} from 'drizzle-orm/sqlite-core';
+export const publications=sqliteTable('publications',{
+ id:text('id').primaryKey(),sourceId:text('source_id').notNull(),
+ retrievedAt:text('retrieved_at').notNull(),metadata:text('metadata').notNull(),
+},t=>[index('publications_source_retrieved').on(t.sourceId,t.retrievedAt)]);
+export const collectionSources=sqliteTable('collection_sources',{
+ id:text('id').primaryKey(),nextAllowedAt:integer('next_allowed_at').notNull(),state:text('state'),
+});

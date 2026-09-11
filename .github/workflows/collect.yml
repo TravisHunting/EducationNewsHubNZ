@@ -1,4 +1,4 @@
-name: Collect public education metadata
+name: Trigger Site education collection
 on:
   schedule:
     - cron: '17 17 * * *'
@@ -12,9 +12,10 @@ jobs:
     # Evaluated before a runner is allocated. Private repos and forks fail closed.
     if: github.repository == 'TravisHunting/EducationNewsHubNZ' && github.event.repository.private == false && github.event.repository.visibility == 'public' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 90
     permissions:
-      contents: write
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
@@ -23,9 +24,7 @@ jobs:
         with:
           node-version: '22'
           package-manager-cache: false
-      # No npm install, paid AI, caches, artifacts, service credentials or deployments.
-      - name: Reserve daily slot and collect bounded metadata
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      # Only authenticated triggers. No publisher scraping or snapshot writes in GitHub.
+      - name: Trigger Site backend collection
         run: node scripts/scheduled-collect.mjs
 

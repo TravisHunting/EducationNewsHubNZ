@@ -1,42 +1,52 @@
 # Education Intelligence — Aotearoa
 
-Public NZ education research desk at https://edu.travishunting.com, hosted with Sites. Search, topic analysis, source diagnostics, archived AI interpretation and Markdown/JSON/JSONL/CSV research packs remain available.
+NZ education research desk at https://edu.travishunting.com, hosted with Sites.
 
-## Cost protection comes first
+## Collection architecture
 
-**This app has no running resources in Travis's Cloudflare account.** Its former Worker, Workers AI binding, KV namespace, Durable Object, secret, cron and public endpoints were retired on 11 September 2026. The domain is a DNS-only CNAME on a Free Website zone pointing to Sites. Do not recreate the paid collector. See [the cost audit](docs/COST-PROTECTION.md) for scope, verification and limitations.
+GitHub Actions supplies only the daily clock. The scheduled workflow sends one authenticated request per source to the **Site backend**. The backend discovers publications, fetches their full pages and linked files, and writes directly to **Sites-managed D1 and R2**. The website does not fetch a GitHub snapshot. No separate Worker or storage is created in Travis's Cloudflare account.
 
-Sites owns the website deployment. `.openai/hosting.json` preserves its identity and has no D1 or R2 bindings. The website reads a fixed public GitHub snapshot, with a 900 KB response ceiling, five-second timeout, five-minute cache, coalesced concurrent requests and one-minute failure cache. It falls back to a dated saved copy. Public requests cannot select a fetch destination or trigger collection, AI, writes or deployments. `/api/refresh` remains closed with HTTP 405.
+- D1 holds publication metadata, provenance, collection health and atomic daily reservations.
+- R2 holds the complete fetched HTML, complete extracted page text, and original document bytes (PDF, Word, Excel and CSV).
+- Cards display short summaries. Record details load saved full text and link to downloadable original HTML and archived documents.
+- Markdown, JSON, JSONL and CSV exports include complete extracted page text. Binary document contents are available through archive download URLs; they are not converted to text or embedded in the exports.
+- A page or document that exceeds its limit fails explicitly; the collector never silently stores a truncated file as complete. JavaScript-only content, authentication, paywalls, robots exclusions and bot checks are not bypassed.
 
-## Automatic collection
+The extracted text preserves the whole readable HTML body rather than guessing a publisher-specific article boundary; it can include navigation or other page furniture. The original HTML remains available for later re-extraction. Only allowlisted publisher hosts are contacted. Off-host attachments are not fetched.
 
-`.github/workflows/collect.yml` runs on the public repository's standard `ubuntu-24.04` GitHub-hosted runner. GitHub documents these runners as free for public repositories. The job is skipped before runner allocation unless this is the approved public repository and main branch. The collector independently checks the live repository visibility and refuses private operation.
+## Schedule and authentication
 
-- Scheduled at 17:17 UTC each day (05:17 NZST / 06:17 NZDT); owner-triggered dispatches use the same guard. No push, pull-request or public webhook triggers.
-- One concurrency group. A persisted `state.json` reservation on the `collection` branch is updated using a SHA compare-and-swap **before** contacting publishers. Conflicting or malformed state fails closed. Failed jobs do not refund the daily reservation.
-- At most one batch per rolling 24 hours. GitHub may delay jobs, so collection can be less frequent. Scheduled public workflows may be disabled after 60 days without repository activity.
-- Twelve-minute job timeout; ten-minute process deadline; at most 180 publisher HTTP requests per run; no automatic retry loop.
-- Nine allowlisted sources, at most five publication records processed per source. Each request has a 12-second deadline, bounded redirects and a streaming response-size ceiling.
-- At most 250 records per source and 900,000 bytes for the published snapshot. Oldest records are trimmed to fit. Failed source checks preserve previous records.
-- No paid AI calls, Cloudflare credentials, third-party API keys, caches, uploaded artifacts, larger runners or automatic site deployments.
-- Only the workflow's short-lived repository token is used. Third-party actions are pinned to full commit SHAs; checkout does not persist credentials.
+The public repository workflow runs at 17:17 UTC daily (05:17 NZST / 06:17 NZDT), and supports owner workflow dispatch. It has read-only source access and permission to request a short-lived GitHub OIDC identity token. No shared secret or runtime environment variable setup is needed.
 
-The `collection` branch contains `snapshot.json` and `state.json`, separate from application code. The public app picks up new snapshots without redeployment. The old generated AI briefing is explicitly archived; automated AI generation is disabled. Topic analysis and AI-ready research packs do not require inference services.
+The backend verifies the GitHub signature, issuer, audience, expiry, subject, immutable repository and owner IDs, public visibility, main branch, exact workflow path and scheduled/manual event. Keys come only from GitHub's fixed JWKS endpoint. Unsigned callers cannot collect. See [GitHub OIDC claims](https://docs.github.com/en/actions/reference/security/oidc).
 
-## Sources and provenance
+Each source receives at most one reservation per rolling 24 hours. The D1 conditional insert/update happens before publisher I/O; duplicate requests and failed jobs do not refund it. GitHub waits for each response while the Site performs the work, then proceeds to the next source even after a source failure. No background work is entrusted to a short post-response lifetime.
 
-`lib/sources.mjs` defines Ministry of Education, NCEA Education, Education Counts, Education Review Office, NZQA, Tertiary Education Commission, Beehive Education, RNZ Education and NZCER. Access restrictions and parser failures remain visible. The collector respects robots rules, rejects unsafe/off-list redirects and never bypasses authentication, paywalls or bot challenges.
+Per source run: up to five publications, six new document downloads, 45 publisher HTTP requests and an eight-minute collection deadline. Each fetch has a 12-second timeout and bounded redirects. HTML is limited to 2 MB, documents to 10 MB and robots files to 512 KB. The workflow has a 90-minute ceiling for all nine sequential requests. Download budgets and failures are reported in document/source status. Existing archived document files are reused; their retrieval dates remain intact.
 
-Only headlines and short publisher metadata are collected; RNZ uses headlines only. Publisher document links remain with their original hosts and are not downloaded or analysed. Publication dates are separate from retrieval dates; unknown dates stay null. Retained URLs are deduplicated. Exports include provenance and CSV formula protection.
+## Persistence and migration
 
-Public endpoints: `/api/data`, `/api/export?format=json`, `/api/export?format=jsonl`, `/api/export?format=markdown`, `/api/export?format=csv`, `/llms.txt`. Exports accept an optional `topic`; the interactive builder also supports search, source, dates and exact selection.
+On each source's first run, its legacy metadata is copied into D1, then records without archived content are prioritized for full retrieval. The dated bundled legacy snapshot is an explicitly labelled fallback when Site storage is unavailable. Its old AI brief remains available as archived interpretation; no new inference calls are made.
+
+The feed reads the latest 250 records per source. Older publication metadata and content remain in backend storage and can be retrieved by record ID. Content keys identify revisions; writes publish metadata only after content objects have saved. An interrupted collection retains each already saved record. Storage is not capped at the old 900 KB snippet snapshot; accumulated archive storage remains subject to Sites quotas and terms. Source changes can retain earlier object revisions.
+
+Endpoints:
+
+- GET /api/data — metadata and source health from Site storage.
+- POST /api/collect?source=ministry — workflow identity required; scraping runs in the Site backend.
+- GET /api/publications/ID — complete saved extracted text and provenance.
+- GET /api/publications/ID?format=html — original HTML, forced download so publisher scripts cannot run on the Site origin.
+- GET /api/publications/ID?document=0 — complete original document file.
+- GET /api/export?format=json — streamed full-text research export; also jsonl, markdown and csv, with optional topic.
+- POST /api/export?format=json — read-only export of a bounded JSON ids array selected in the UI.
+- POST /api/refresh — remains closed; visitors reload saved data rather than trigger scraping.
+
+Exports stream one record at a time to keep full archives out of Worker memory. Missing content is labelled, not replaced with invented full text. Publisher material is untrusted evidence and retains its original reuse terms.
 
 ## Development and publishing
 
-Use Node 22.13 or later: `npm ci`, `npm run dev`, `npm test`, `npm run build`. The native Windows npm shim may misresolve its installation; the equivalent local fallback is `node C:/Nodejs/Nodejs2217/node_modules/npm/bin/npm-cli.js run build`. Attempt the Sites build helper first.
+Use Node 22.13+: npm ci, npm run dev, npm test, npm run build. On this Windows installation the npm shim may require invoking C:/Nodejs/Nodejs2217/node_modules/npm/bin/npm-cli.js directly with node. Generate D1 migrations with npm run db:generate and apply them to local storage before previewing backend data. Sites applies packaged migrations during deployment.
 
-`node scripts/collect.mjs` is an operator-only local snapshot utility, never exposed through the website or used by the scheduled workflow. It does not consume Cloudflare services. `scripts/scheduled-collect.mjs` only runs in the approved GitHub workflow. Keep collection reservations intact; do not reset the branch to bypass cooldowns.
+The Sites manifest declares only logical DB and BUCKET bindings. Sites owns resource provisioning and wiring. Do not deploy a replacement service with Wrangler or add personal Cloudflare credentials. Publish through the Sites skills after validating source, migration, build, and Worker integration tests. Existing public access requires publication approval.
 
-Tests cover parsing, safe redirects, robots compliance, export safety, daily reservation boundaries, request and storage budgets, cache coalescing, oversized-feed fallback, closed public mutation routes and absence of paid collector deployment configuration. Run `node node_modules/typescript/bin/tsc --noEmit` for type checking.
-
-Publish using the Sites building and hosting skills: validate, commit, push the exact source to GitHub and Sites, package the build, save a version, deploy to the existing public audience and verify it. No application runtime environment variables or secrets are required. Never add billing-enabled services as a fallback when quotas or source access fail.
+Tests exercise full text beyond the old snippet cutoff, raw HTML and PDF byte storage, all four exports, workflow identity rejection, concurrent reservations, duplicate URL preservation, robots and redirect restrictions, and retaining old content after failures. The previous personal-account retirement audit remains in docs/COST-PROTECTION.md as historical evidence; its former GitHub-storage design is superseded here.
