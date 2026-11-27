@@ -1,0 +1,18 @@
+{
+  "name": "education-intelligence",
+  "account_id": "9db3fdbf2cd85b2224816f22e7599fa8",
+  "compatibility_date": "2026-11-27",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "edu.travishunting.com/*",
+      "zone_name": "travishunting.com"
+    }
+  ],
+  "assets": {
+    "directory": "./dist/cloudflare/assets",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

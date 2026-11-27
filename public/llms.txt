@@ -1,0 +1,9 @@
+# Education Intelligence | Aotearoa
+
+> A read-only concept demo with a fixed snapshot of New Zealand education evidence.
+
+- [Education Intelligence](https://edu.travishunting.com/): Browse records, topic insights and sources.
+- [Evidence snapshot](https://edu.travishunting.com/api/data): Read the snapshot metadata and publication excerpts as JSON.
+- [Research packs](https://edu.travishunting.com/#downloads): Build and download a filtered or selected pack in Markdown, JSON, JSONL or CSV.
+
+Use the publisher links to verify findings and review the original material.

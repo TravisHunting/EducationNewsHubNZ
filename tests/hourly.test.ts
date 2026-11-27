@@ -5,8 +5,13 @@ import {POST} from '../app/api/refresh/route';
 import {readFileSync,existsSync} from 'node:fs';
 test('request budget stops before an extra publisher request',async()=>{let calls=0;const fetcher=budgetedFetch(async()=>{calls++;return new Response('ok')},3);for(let i=0;i<3;i++)await fetcher('https://example.test');assert.throws(()=>fetcher('https://example.test'),/budget exhausted/);assert.equal(calls,3)});
 test('public refresh remains closed',async()=>{assert.equal((await POST()).status,405)});
-test('GitHub only triggers and Sites owns both storage bindings',()=>{
- const manifest=JSON.parse(readFileSync('.openai/hosting.json','utf8'));assert.equal(manifest.d1,'DB');assert.equal(manifest.r2,'BUCKET');assert.equal(existsSync('collector/wrangler.jsonc'),false);
- const workflow=readFileSync('.github/workflows/collect.yml','utf8');assert.match(workflow,/contents: read/);assert.match(workflow,/id-token: write/);assert.doesNotMatch(workflow,/contents: write|CLOUDFLARE_API_TOKEN/);
- const trigger=readFileSync('scripts/scheduled-collect.mjs','utf8');assert.doesNotMatch(trigger,/collector.mjs|api.github.com|snapshot.json/);assert.match(trigger,/edu.travishunting.com\/api\/collect/);
+test('the Cloudflare concept deploys only a static evidence snapshot',()=>{
+ const config=JSON.parse(readFileSync('wrangler.jsonc','utf8'));
+ assert.equal(config.assets.directory,'./dist/cloudflare/assets');
+ for(const key of ['main','triggers','d1_databases','r2_buckets'])assert.equal(config[key],undefined);
+ assert.equal(existsSync('.github/workflows/collect.yml'),false);
+ const snapshot=JSON.parse(readFileSync('public/api/data','utf8'));
+ assert.equal(snapshot.mode,'snapshot');
+ assert.ok(snapshot.records.length>0);
+ assert.ok(snapshot.records.every(record=>!record.contentKey&&!record.htmlKey));
 });
